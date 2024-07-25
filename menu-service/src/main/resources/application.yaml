@@ -1,4 +1,8 @@
 spring:
   application:
     name: menu-service
-
+  flyway:
+    locations: classpath:/db/migration/core
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath*:mappers/*.xml

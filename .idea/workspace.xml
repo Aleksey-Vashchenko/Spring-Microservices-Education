@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: initializing eureka server container">
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: add model entity. Add MyBatis mapper and config">
+      <change afterPath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/menuItem-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/menuItem-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/mybatis‑config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +33,30 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/menu-service">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,29 +69,132 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build menu-service.executor": "Run",
+    "Gradle.MenuItemRepositoryTest.executor": "Run",
+    "Gradle.MenuItemRepositoryTest.save.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MenuServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "20",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/programming/Spring-Microservices-Education/menu-service/src/test/resources/db.migration",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.43931496",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db.migration" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db.migration" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db\migration" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db.migration" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.vashchenko.micro.edu.menuservice.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.MenuItemRepositoryTest">
+    <configuration name="MenuItemRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.vashchenko.micro.edu.menuservice.repository.MenuItemRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MenuItemRepositoryTest.save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.vashchenko.micro.edu.menuservice.repository.MenuItemRepositoryTest.save&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="menu-service.main" />
+      <selectedOptions>
+        <option name="environmentVariables" />
+      </selectedOptions>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.menuservice.MenuServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vashchenko.micro.edu.menuservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.MenuItemRepositoryTest" />
+      <item itemvalue="Gradle.MenuItemRepositoryTest.save" />
+      <item itemvalue="Spring Boot.MenuServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.MenuItemRepositoryTest" />
+        <item itemvalue="Gradle.MenuItemRepositoryTest.save" />
+        <item itemvalue="Spring Boot.MenuServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -89,7 +214,9 @@
       <updated>1721858782286</updated>
       <workItem from="1721858783377" duration="2071000" />
       <workItem from="1721931960603" duration="1647000" />
-      <workItem from="1721934891790" duration="408000" />
+      <workItem from="1721934891790" duration="6580000" />
+      <workItem from="1721945004566" duration="220000" />
+      <workItem from="1721945282286" duration="4380000" />
     </task>
     <task id="LOCAL-00001" summary="init: инициализация проекта. Сохранение настроек Intellij Idea">
       <option name="closed" value="true" />
@@ -107,7 +234,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721933865536</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: initializing menu service">
+      <option name="closed" value="true" />
+      <created>1721942574242</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721942574242</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add model entity. Add MyBatis mapper and config">
+      <option name="closed" value="true" />
+      <created>1721943050625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721943050625</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +259,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: инициализация проекта. Сохранение настроек Intellij Idea" />
     <MESSAGE value="feat: initializing eureka server container" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initializing eureka server container" />
+    <MESSAGE value="feat: initializing menu service" />
+    <MESSAGE value="feat: add model entity. Add MyBatis mapper and config" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add model entity. Add MyBatis mapper and config" />
   </component>
 </project>
