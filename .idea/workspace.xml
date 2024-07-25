@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="init: инициализация проекта. Сохранение настроек Intellij Idea">
+    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: initializing eureka server container">
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/MenuItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,16 @@
     <projectState path="$PROJECT_DIR$/eureka-server">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/menu-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +62,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="menu-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.menuservice.MenuServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -69,7 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1721858782286</updated>
       <workItem from="1721858783377" duration="2071000" />
-      <workItem from="1721931960603" duration="27000" />
+      <workItem from="1721931960603" duration="1647000" />
+      <workItem from="1721934891790" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="init: инициализация проекта. Сохранение настроек Intellij Idea">
       <option name="closed" value="true" />
@@ -79,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721859989804</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: initializing eureka server container">
+      <option name="closed" value="true" />
+      <created>1721933865536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721933865536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: инициализация проекта. Сохранение настроек Intellij Idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="init: инициализация проекта. Сохранение настроек Intellij Idea" />
+    <MESSAGE value="feat: initializing eureka server container" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: initializing eureka server container" />
   </component>
 </project>
