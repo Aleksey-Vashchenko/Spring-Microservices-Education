@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
         'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace="com.vashchenko.micro.edu.menuservice.repository.MenuItemRepository">
+<mapper namespace="com.vashchenko.micro.edu.menuservice.repository.DishRepository">
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
         <if test="id == null">
-            INSERT INTO menu_items (name, price,description,weight) values (#{name},#{price},#{description},#{weight});
+            INSERT INTO dishes (name, price,description,weight) values (#{name},#{price},#{description},#{weight});
         </if>
         <if test="id != null">
-            UPDATE menu_items SET name=#{name},price=#{price},description=#{description},weight=#{weight} where id=#{id};
+            UPDATE dishes SET name=#{name},price=#{price},description=#{description},weight=#{weight} where id=#{id};
         </if>
     </insert>
 
-    <select id="findAll" resultMap="MenuItemMap">
-        select * from menu_items;
+    <select id="findAll" resultMap="DishMap">
+        select * from dishes;
     </select>
 
-    <select id="findById" resultMap="MenuItemMap">
-        select * from menu_items where id = #{id};
+    <select id="findById" resultMap="DishMap">
+        select * from dishes where id = #{id};
     </select>
 
-    <resultMap id="MenuItemMap" type="MenuItem" autoMapping="true"/>
+    <resultMap id="DishMap" type="Dish" autoMapping="true"/>
 </mapper>

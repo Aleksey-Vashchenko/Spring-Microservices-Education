@@ -1,6 +1,6 @@
 package com.vashchenko.micro.edu.menuservice.repository;
 
-import com.vashchenko.micro.edu.menuservice.model.MenuItem;
+import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -15,10 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @ActiveProfiles("test")
-class MenuItemRepositoryTest {
+class DishRepositoryTest {
 
     @Autowired
-    MenuItemRepository menuItemRepository;
+    DishRepository dishRepository;
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -29,26 +29,26 @@ class MenuItemRepositoryTest {
 
     @Test
     void save() {
-        MenuItem item = Instancio.of(MenuItem.class).ignore(field(MenuItem::getId)).create();
-        menuItemRepository.save(item);
-        assertNotNull(item.getId());
+        Dish dish = Instancio.of(Dish.class).ignore(field(Dish::getId)).create();
+        dishRepository.save(dish);
+        assertNotNull(dish.getId());
     }
 
     @Test
     void getAll() {
-        List<MenuItem> itemList = Instancio.ofList(MenuItem.class).size(3).ignore(field(MenuItem::getId)).create();
-        for (MenuItem item : itemList) {
-            menuItemRepository.save(item);
+        List<Dish> itemList = Instancio.ofList(Dish.class).size(3).ignore(field(Dish::getId)).create();
+        for (Dish item : itemList) {
+            dishRepository.save(item);
         }
-        List<MenuItem> items = menuItemRepository.findAll();
+        List<Dish> items = dishRepository.findAll();
         assertEquals(items.size(),itemList.size());
     }
 
     @Test
     void findById() {
-        MenuItem item = Instancio.of(MenuItem.class).ignore(field(MenuItem::getId)).create();
-        menuItemRepository.save(item);
-        MenuItem itemFromBd = menuItemRepository.findById(item.getId());
+        Dish item = Instancio.of(Dish.class).ignore(field(Dish::getId)).create();
+        dishRepository.save(item);
+        Dish itemFromBd = dishRepository.findById(item.getId());
         assertEquals(item,itemFromBd);
     }
 }
