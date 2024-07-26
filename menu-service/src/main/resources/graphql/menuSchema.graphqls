@@ -1,0 +1,11 @@
+type Query{
+    items:[Dish]
+}
+
+type Dish{
+    id:Int!
+    name:String!
+    price:Float!
+    weight:Int
+    description:String
+}

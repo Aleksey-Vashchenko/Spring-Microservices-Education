@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: create H2 test for myBatis mapper and flyway migration" />
+    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: update eureka-server properties">
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/dto/request/DishDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/mapping/DishMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/web/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/web/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/DishRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/DishRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +34,9 @@
     <projectState path="$PROJECT_DIR$/eureka-server">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/maven-eureka">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/menu-service">
       <ProjectState />
     </projectState>
@@ -27,15 +47,26 @@
         <task path="$PROJECT_DIR$/menu-service">
           <activation />
         </task>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/eureka-server">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,9 +91,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build eureka-server.executor": "Run",
     "Gradle.Build menu-service.executor": "Run",
+    "Gradle.DishMapperTest.executor": "Run",
     "Gradle.MenuItemRepositoryTest.executor": "Run",
     "Gradle.MenuItemRepositoryTest.save.executor": "Run",
+    "Gradle.MenuServiceApplicationTests.executor": "Run",
+    "Gradle.eureka-server [bootTestRun].executor": "Run",
+    "Gradle.eureka-server [clean].executor": "Run",
+    "Gradle.eureka-server [test].executor": "Run",
+    "Gradle.menu-service [clean].executor": "Run",
+    "Gradle.menu-service [test].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -72,27 +111,40 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.MavenClientApplication.executor": "Run",
+    "Spring Boot.MavenEurekaServerApplication.executor": "Run",
     "Spring Boot.MenuServiceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "20",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/programming/Spring-Microservices-Education/menu-service/src/test/resources/db.migration",
+    "last_opened_file_path": "E:/programming/Spring-Microservices-Education",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.43931496",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\programming\Spring-Microservices-Education\eureka-server\src\main\resources" />
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db.migration" />
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources" />
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources" />
@@ -108,59 +160,44 @@
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db.migration\core" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.vashchenko.micro.edu.menuservice.model.mapping" />
       <recent name="com.vashchenko.micro.edu.menuservice.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MenuItemRepositoryTest">
-    <configuration name="MenuItemRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.vashchenko.micro.edu.menuservice.repository.MenuItemRepositoryTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle bootTestRun" />
+      <command value="gradle test" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MenuServiceApplication">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="20" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="eureka-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.eurekaserver.EurekaServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vashchenko.micro.edu.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="MenuItemRepositoryTest.save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.vashchenko.micro.edu.menuservice.repository.MenuItemRepositoryTest.save&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="20" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="menu-service.main" />
       <selectedOptions>
         <option name="environmentVariables" />
@@ -177,14 +214,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.MenuItemRepositoryTest" />
-      <item itemvalue="Gradle.MenuItemRepositoryTest.save" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.MenuServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MenuItemRepositoryTest" />
-        <item itemvalue="Gradle.MenuItemRepositoryTest.save" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="Spring Boot.MenuServiceApplication" />
       </list>
     </recent_temporary>
@@ -210,6 +245,9 @@
       <workItem from="1721934891790" duration="6580000" />
       <workItem from="1721945004566" duration="220000" />
       <workItem from="1721945282286" duration="5460000" />
+      <workItem from="1721983035885" duration="8571000" />
+      <workItem from="1721998805212" duration="5901000" />
+      <workItem from="1722005671560" duration="3011000" />
     </task>
     <task id="LOCAL-00001" summary="init: инициализация проекта. Сохранение настроек Intellij Idea">
       <option name="closed" value="true" />
@@ -275,7 +313,39 @@
       <option name="project" value="LOCAL" />
       <updated>1721950764146</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: add equals/hashcode for MenuItem.java. Update findAll method in MenuItemRepository.java">
+      <option name="closed" value="true" />
+      <created>1721984132703</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721984132703</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add tests for MenuItemRepository.class with auto cleaning tables">
+      <option name="closed" value="true" />
+      <created>1721984176979</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721984176979</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: update entity MenuItem.java to Dish.java">
+      <option name="closed" value="true" />
+      <created>1721991174741</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1721991174741</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: update eureka-server properties">
+      <option name="closed" value="true" />
+      <created>1721993931836</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721993931836</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +370,10 @@
     <MESSAGE value="feat: update MenuItemRepository.java, menuItem-mapper.xml. Set locations for myBatis config and mappers" />
     <MESSAGE value="fix: fix grammar syntax V1_0__InitDatabase.sql migration" />
     <MESSAGE value="feat: create H2 test for myBatis mapper and flyway migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create H2 test for myBatis mapper and flyway migration" />
+    <MESSAGE value="feat: add equals/hashcode for MenuItem.java. Update findAll method in MenuItemRepository.java" />
+    <MESSAGE value="feat: add tests for MenuItemRepository.class with auto cleaning tables" />
+    <MESSAGE value="fix: update entity MenuItem.java to Dish.java" />
+    <MESSAGE value="feat: update eureka-server properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update eureka-server properties" />
   </component>
 </project>
