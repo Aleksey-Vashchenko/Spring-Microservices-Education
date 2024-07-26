@@ -15,7 +15,7 @@ public class JwtAuthentication implements Authentication {
     private String username;
     private String email;
     private String name;
-    private UUID uuid;
+    private String uuid;
     private Set<GrantedAuthority> roles;
 
     @Override

@@ -14,7 +14,7 @@ import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 @Component
 @RequiredArgsConstructor
-public class JwtAuthenticateFilter extends OncePerRequestFilter {
+public class JwtAuthenticateFilter extends OncePerRequestFilter  {
 
     private final JwtService jwtService;
 
@@ -25,13 +25,7 @@ public class JwtAuthenticateFilter extends OncePerRequestFilter {
             bearerToken = bearerToken.substring(7);
             SecurityContextHolder.getContext().setAuthentication(jwtService.authenticate(bearerToken));
         }
-        else {
-            filterChain.doFilter(request, response);
-        }
-    }
-
-    private record ErrorResponse(String error, String message, Integer statusCode){
-
+        filterChain.doFilter(request, response);
     }
 }
 

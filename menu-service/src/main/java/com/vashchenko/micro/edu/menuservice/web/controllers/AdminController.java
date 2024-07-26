@@ -30,7 +30,7 @@ public class AdminController {
     }
 
     @Secured("ROLE_ADMIN")
-    @PostMapping("menu")
+    @PostMapping("dishes")
     void createItem(@RequestBody DishDto request){
         dishRepository.save(dishMapper.toEntity(request));
     }
