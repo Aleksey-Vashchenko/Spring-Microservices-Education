@@ -24,7 +24,7 @@ class DishRepositoryTest {
 
     @AfterEach
     public void clearDatabase() {
-        jdbcTemplate.update("TRUNCATE TABLE menu_items");
+        jdbcTemplate.update("TRUNCATE TABLE dishes");
     }
 
     @Test
