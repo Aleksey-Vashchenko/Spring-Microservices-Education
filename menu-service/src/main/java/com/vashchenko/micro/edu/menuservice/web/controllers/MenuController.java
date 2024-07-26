@@ -1,4 +1,4 @@
-package com.vashchenko.micro.edu.menuservice.web;
+package com.vashchenko.micro.edu.menuservice.web.controllers;
 
 import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
 import com.vashchenko.micro.edu.menuservice.repository.DishRepository;

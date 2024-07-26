@@ -1,4 +1,4 @@
-package com.vashchenko.micro.edu.menuservice.web;
+package com.vashchenko.micro.edu.menuservice.web.controllers;
 
 import com.vashchenko.micro.edu.menuservice.model.dto.request.DishDto;
 import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
@@ -7,6 +7,7 @@ import com.vashchenko.micro.edu.menuservice.repository.DishRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,12 +22,14 @@ public class AdminController {
     DishMapper dishMapper;
 
     @PostMapping("dishes/{dishId}")
+    @Secured("ROLE_ADMIN")
     void updateItem(@RequestBody DishDto request, @PathVariable(name = "dishId") Long dishId){
         Dish dish = dishMapper.toEntity(request);
         dish.setId(dishId);
         dishRepository.save(dish);
     }
 
+    @Secured("ROLE_ADMIN")
     @PostMapping("menu")
     void createItem(@RequestBody DishDto request){
         dishRepository.save(dishMapper.toEntity(request));
