@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface MenuItemRepository {
     void save(MenuItem menuItem);
-    List<MenuItem> getAll();
+    List<MenuItem> findAll();
 
     MenuItem findById(Long id);
 }

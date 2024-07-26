@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: add model entity. Add MyBatis mapper and config">
-      <change afterPath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/menuItem-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/menuItem-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/mappers/mybatis‑config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/MenuItemRepositoryTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: create H2 test for myBatis mapper and flyway migration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,9 +59,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build menu-service.executor": "Run",
     "Gradle.MenuItemRepositoryTest.executor": "Run",
     "Gradle.MenuItemRepositoryTest.save.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -109,10 +101,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db.migration" />
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db\migration" />
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db.migration" />
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db\migration" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db\migration\core" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db\migration\test" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db.migration\core" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.vashchenko.micro.edu.menuservice.repository" />
@@ -216,7 +209,7 @@
       <workItem from="1721931960603" duration="1647000" />
       <workItem from="1721934891790" duration="6580000" />
       <workItem from="1721945004566" duration="220000" />
-      <workItem from="1721945282286" duration="4380000" />
+      <workItem from="1721945282286" duration="5460000" />
     </task>
     <task id="LOCAL-00001" summary="init: инициализация проекта. Сохранение настроек Intellij Idea">
       <option name="closed" value="true" />
@@ -250,17 +243,63 @@
       <option name="project" value="LOCAL" />
       <updated>1721943050625</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: update MenuItemRepository.java, menuItem-mapper.xml. Set locations for myBatis config and mappers">
+      <option name="closed" value="true" />
+      <created>1721950449100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721950449100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: update MenuItemRepository.java, menuItem-mapper.xml. Set locations for myBatis config and mappers">
+      <option name="closed" value="true" />
+      <created>1721950523149</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721950523149</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: fix grammar syntax V1_0__InitDatabase.sql migration">
+      <option name="closed" value="true" />
+      <created>1721950690026</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721950690026</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: create H2 test for myBatis mapper and flyway migration">
+      <option name="closed" value="true" />
+      <created>1721950764146</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721950764146</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: инициализация проекта. Сохранение настроек Intellij Idea" />
     <MESSAGE value="feat: initializing eureka server container" />
     <MESSAGE value="feat: initializing menu service" />
     <MESSAGE value="feat: add model entity. Add MyBatis mapper and config" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add model entity. Add MyBatis mapper and config" />
+    <MESSAGE value="feat: update MenuItemRepository.java, menuItem-mapper.xml. Set locations for myBatis config and mappers" />
+    <MESSAGE value="fix: fix grammar syntax V1_0__InitDatabase.sql migration" />
+    <MESSAGE value="feat: create H2 test for myBatis mapper and flyway migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create H2 test for myBatis mapper and flyway migration" />
   </component>
 </project>
