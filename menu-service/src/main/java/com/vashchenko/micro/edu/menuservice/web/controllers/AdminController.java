@@ -7,11 +7,8 @@ import com.vashchenko.micro.edu.menuservice.repository.DishRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,15 +18,15 @@ public class AdminController {
     DishRepository dishRepository;
     DishMapper dishMapper;
 
-    @PostMapping("dishes/{dishId}")
-    @Secured("ROLE_ADMIN")
+    @PatchMapping("dishes/{dishId}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     void updateItem(@RequestBody DishDto request, @PathVariable(name = "dishId") Long dishId){
         Dish dish = dishMapper.toEntity(request);
         dish.setId(dishId);
         dishRepository.save(dish);
     }
 
-    @Secured("ROLE_ADMIN")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("dishes")
     void createItem(@RequestBody DishDto request){
         dishRepository.save(dishMapper.toEntity(request));
