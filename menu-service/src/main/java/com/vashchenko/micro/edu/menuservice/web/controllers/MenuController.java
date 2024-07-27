@@ -4,7 +4,9 @@ import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
 import com.vashchenko.micro.edu.menuservice.repository.DishRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -14,8 +16,10 @@ import org.springframework.stereotype.Controller;
 public class MenuController {
 
     DishRepository dishRepository;
-    @QueryMapping("menu")
-    Iterable<Dish> dishes(){
+    @Cacheable(value = "menuCache", key = "'menu'")
+    @QueryMapping()
+    @SneakyThrows
+    public Iterable<Dish> dishes(){
         return dishRepository.findAll();
     }
 }

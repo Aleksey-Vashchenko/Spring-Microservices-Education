@@ -9,6 +9,7 @@ import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,8 @@ public class AdminController {
     @PatchMapping("dishes/{dishId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @ResponseStatus(HttpStatus.OK)
-    void updateItem(@Valid @RequestBody DishDto request, @PathVariable(name = "dishId") Long dishId){
+    @CacheEvict(value = "menuCache", key = "'menu'")
+    public void updateItem(@Valid @RequestBody DishDto request, @PathVariable(name = "dishId") Long dishId){
         Dish dish = dishMapper.toEntity(request);
         dish.setId(dishId);
         dishRepository.save(dish);
@@ -34,7 +36,8 @@ public class AdminController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("dishes")
     @ResponseStatus(HttpStatus.CREATED)
-    Response<Map<String,Long>> createItem(@Valid  @RequestBody DishDto request){
+    @CacheEvict(value = "menuCache", key = "'menu'")
+    public Response<Map<String,Long>> createItem(@Valid  @RequestBody DishDto request){
         Dish dishToCreate = dishMapper.toEntity(request);
         dishRepository.save(dishToCreate);
         return new Response<>(Map.of("createdId",dishToCreate.getId()));
