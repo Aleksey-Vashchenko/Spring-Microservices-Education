@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
         'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace="com.vashchenko.micro.edu.menuservice.repository.DishRepository">
+<mapper namespace="com.vashchenko.micro.edu.menuservice.repository.MyBatisDishRepository">
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
         <if test="id == null">
@@ -18,6 +18,16 @@
 
     <select id="findById" resultMap="DishMap">
         select * from dishes where id = #{id};
+    </select>
+
+    <select id="selectDishesForPage" resultMap="DishMap">
+        SELECT * FROM dishes
+        ORDER BY id
+        LIMIT #{size} OFFSET #{offset}
+    </select>
+
+    <select id="countDishes" resultType="int">
+        SELECT COUNT(*) FROM dishes
     </select>
 
     <resultMap id="DishMap" type="Dish" autoMapping="true"/>

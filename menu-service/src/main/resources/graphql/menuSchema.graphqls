@@ -1,5 +1,6 @@
 type Query{
-    dishes:[Dish]
+    allDishes:[Dish]
+    pageableDishes(page: Int!, size: Int!):DishPage
 }
 
 type Dish{
@@ -8,4 +9,31 @@ type Dish{
     price:Float!
     weight:Int
     description:String
+}
+
+type DishPage{
+    content: [Dish]!
+    totalElements: Int!
+    totalPages: Int!
+    currentPage: Int!
+    pageSize: Int!
+}
+
+type Mutation {
+    createDish(input: CreateDishInput!): Dish!
+    updateDish(id: ID!, input: UpdateDishInput!): Dish!
+}
+
+input CreateDishInput {
+    name: String!
+    price: Float!
+    weight: Int
+    description: String
+}
+
+input UpdateDishInput {
+    name: String
+    price: Float
+    weight: Int
+    description: String
 }

@@ -2,7 +2,7 @@ package com.vashchenko.micro.edu.menuservice.web.controllers;
 
 import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
 import com.vashchenko.micro.edu.menuservice.model.mapping.DishMapper;
-import com.vashchenko.micro.edu.menuservice.repository.DishRepository;
+import com.vashchenko.micro.edu.menuservice.repository.MyBatisDishRepository;
 import com.vashchenko.micro.edu.menuservice.web.security.JwtService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ class AdminControllerTest {
     private DishMapper dishMapper;
 
     @MockBean
-    private DishRepository dishRepository;
+    private MyBatisDishRepository myBatisDishRepository;
 
     @MockBean
     private JwtService jwtService;
@@ -49,7 +49,7 @@ class AdminControllerTest {
             Dish dishInMethod = invocation.getArgument(0);
             dishInMethod.setId(1L);
             return null;
-        }).when(dishRepository).save(any(Dish.class));
+        }).when(myBatisDishRepository).save(any(Dish.class));
         doAnswer(invocation -> {
             return null;
         }).when(jwtService).authenticate(any(String.class));
@@ -58,7 +58,7 @@ class AdminControllerTest {
                         .content("{\"name\":\"Pizza\",\"description\":\"Delicious pizza\",\"price\":9.99,\"weight\":500}")
                 )
                 .andExpect(status().isForbidden());
-        verify(dishRepository, times(0)).save(any(Dish.class));
+        verify(myBatisDishRepository, times(0)).save(any(Dish.class));
     }
 
     //TODO solve problem of forbidden request

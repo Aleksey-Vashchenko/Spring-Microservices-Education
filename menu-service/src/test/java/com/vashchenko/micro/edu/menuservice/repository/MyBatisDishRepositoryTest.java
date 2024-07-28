@@ -15,10 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @ActiveProfiles("test")
-class DishRepositoryTest {
+class MyBatisDishRepositoryTest {
 
     @Autowired
-    DishRepository dishRepository;
+    MyBatisDishRepository myBatisDishRepository;
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -30,7 +30,7 @@ class DishRepositoryTest {
     @Test
     void save() {
         Dish dish = Instancio.of(Dish.class).ignore(field(Dish::getId)).create();
-        dishRepository.save(dish);
+        myBatisDishRepository.save(dish);
         assertNotNull(dish.getId());
     }
 
@@ -38,17 +38,17 @@ class DishRepositoryTest {
     void getAll() {
         List<Dish> itemList = Instancio.ofList(Dish.class).size(3).ignore(field(Dish::getId)).create();
         for (Dish item : itemList) {
-            dishRepository.save(item);
+            myBatisDishRepository.save(item);
         }
-        List<Dish> items = dishRepository.findAll();
+        List<Dish> items = myBatisDishRepository.findAll();
         assertEquals(items.size(),itemList.size());
     }
 
     @Test
     void findById() {
         Dish item = Instancio.of(Dish.class).ignore(field(Dish::getId)).create();
-        dishRepository.save(item);
-        Dish itemFromBd = dishRepository.findById(item.getId());
+        myBatisDishRepository.save(item);
+        Dish itemFromBd = myBatisDishRepository.findById(item.getId());
         assertEquals(item,itemFromBd);
     }
 }

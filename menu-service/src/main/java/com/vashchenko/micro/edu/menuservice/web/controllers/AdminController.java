@@ -4,12 +4,14 @@ import com.vashchenko.micro.edu.menuservice.model.dto.request.DishDto;
 import com.vashchenko.micro.edu.menuservice.model.dto.response.Response;
 import com.vashchenko.micro.edu.menuservice.model.entity.Dish;
 import com.vashchenko.micro.edu.menuservice.model.mapping.DishMapper;
-import com.vashchenko.micro.edu.menuservice.repository.DishRepository;
+import com.vashchenko.micro.edu.menuservice.model.service.DishService;
 import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +22,7 @@ import java.util.Map;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AdminController {
 
-    DishRepository dishRepository;
+    DishService dishService;
     DishMapper dishMapper;
 
     @PatchMapping("dishes/{dishId}")
@@ -30,7 +32,7 @@ public class AdminController {
     public void updateItem(@Valid @RequestBody DishDto request, @PathVariable(name = "dishId") Long dishId){
         Dish dish = dishMapper.toEntity(request);
         dish.setId(dishId);
-        dishRepository.save(dish);
+        dishService.save(dish);
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -39,7 +41,25 @@ public class AdminController {
     @CacheEvict(value = "menuCache", key = "'menu'")
     public Response<Map<String,Long>> createItem(@Valid  @RequestBody DishDto request){
         Dish dishToCreate = dishMapper.toEntity(request);
-        dishRepository.save(dishToCreate);
+        dishService.save(dishToCreate);
         return new Response<>(Map.of("createdId",dishToCreate.getId()));
     }
+
+    @MutationMapping
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @CacheEvict(value = "menuCache", key = "'menu'")
+    public Dish createDish(@Argument DishDto input){
+        return dishService.save(dishMapper.toEntity(input));
+    }
+    @MutationMapping
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @CacheEvict(value = "menuCache", key = "'menu'")
+    public Dish updateDish(@Argument Long id, @Argument DishDto input){
+        Dish dishToSave = dishMapper.toEntity(input);
+        dishToSave.setId(id);
+        return dishService.save(dishToSave);
+    }
+
+
+
 }
