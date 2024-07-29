@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="feat: update eureka-server properties">
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/dto/request/DishDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/mapping/DishMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/web/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/web/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="cc13ec2b-32db-4cab-9f47-9dcccd2b7361" name="Changes" comment="api-gateway: init: init api-gateway module">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/vashchenko/micro/edu/apigateway/filters/JwtAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/MenuServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/DishRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/repository/DishRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/menu-service/src/test/resources/application-test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +19,12 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/api-gateway">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/api-getway">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/eureka-server">
@@ -53,6 +49,9 @@
         <task path="$PROJECT_DIR$/eureka-server">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/api-gateway">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -66,6 +65,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -91,12 +91,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AdminControllerTest.executor": "Run",
+    "Gradle.AdminControllerTest.testCreateDish.executor": "Run",
+    "Gradle.AdminControllerTest.testCreateDishAuthorized.executor": "Debug",
+    "Gradle.Build api-getway.executor": "Run",
     "Gradle.Build eureka-server.executor": "Run",
     "Gradle.Build menu-service.executor": "Run",
     "Gradle.DishMapperTest.executor": "Run",
     "Gradle.MenuItemRepositoryTest.executor": "Run",
     "Gradle.MenuItemRepositoryTest.save.executor": "Run",
     "Gradle.MenuServiceApplicationTests.executor": "Run",
+    "Gradle.api-gateway [check].executor": "Run",
     "Gradle.eureka-server [bootTestRun].executor": "Run",
     "Gradle.eureka-server [clean].executor": "Run",
     "Gradle.eureka-server [test].executor": "Run",
@@ -111,6 +116,8 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGetwayApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.MavenClientApplication.executor": "Run",
     "Spring Boot.MavenEurekaServerApplication.executor": "Run",
@@ -120,7 +127,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "20",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/programming/Spring-Microservices-Education",
+    "last_opened_file_path": "E:/programming/Effective_Mobile_test_task",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,10 +151,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\graphql" />
+      <recent name="E:\programming\Spring-Microservices-Education" />
+      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\java\com\vashchenko\micro\edu\menuservice\model" />
       <recent name="E:\programming\Spring-Microservices-Education\eureka-server\src\main\resources" />
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources\db.migration" />
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources" />
-      <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\test\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -160,6 +168,7 @@
       <recent name="E:\programming\Spring-Microservices-Education\menu-service\src\main\resources\db.migration\core" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.vashchenko.micro.edu.menuservice.web.controllers" />
       <recent name="com.vashchenko.micro.edu.menuservice.model.mapping" />
       <recent name="com.vashchenko.micro.edu.menuservice.repository" />
     </key>
@@ -179,29 +188,124 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MenuServiceApplication">
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="20" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="eureka-server.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.eurekaserver.EurekaServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vashchenko.micro.edu.eurekaserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Gradle.api-gateway [check]">
+    <configuration name="AdminControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.vashchenko.micro.edu.menuservice.web.controllers.AdminControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdminControllerTest.testCreateDish" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.vashchenko.micro.edu.menuservice.web.controllers.AdminControllerTest.testCreateDish&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdminControllerTest.testCreateDishAuthorized" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/menu-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.vashchenko.micro.edu.menuservice.web.controllers.AdminControllerTest.testCreateDishAuthorized&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="api-gateway [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="check" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="20" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="ApiGetwayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-getway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.apigetway.ApiGetwayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="menu-service.main" />
-      <selectedOptions>
-        <option name="environmentVariables" />
-      </selectedOptions>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.vashchenko.micro.edu.menuservice.MenuServiceApplication" />
       <extension name="coverage">
         <pattern>
@@ -214,13 +318,22 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.AdminControllerTest" />
+      <item itemvalue="Gradle.AdminControllerTest.testCreateDish" />
+      <item itemvalue="Gradle.AdminControllerTest.testCreateDishAuthorized" />
+      <item itemvalue="Gradle.api-gateway [check]" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ApiGetwayApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.MenuServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Gradle.api-gateway [check]" />
         <item itemvalue="Spring Boot.MenuServiceApplication" />
+        <item itemvalue="Gradle.AdminControllerTest" />
+        <item itemvalue="Gradle.AdminControllerTest.testCreateDishAuthorized" />
+        <item itemvalue="Gradle.AdminControllerTest.testCreateDish" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +360,9 @@
       <workItem from="1721945282286" duration="5460000" />
       <workItem from="1721983035885" duration="8571000" />
       <workItem from="1721998805212" duration="5901000" />
-      <workItem from="1722005671560" duration="3011000" />
+      <workItem from="1722005671560" duration="26065000" />
+      <workItem from="1722066168316" duration="3691000" />
+      <workItem from="1722069897299" duration="19171000" />
     </task>
     <task id="LOCAL-00001" summary="init: инициализация проекта. Сохранение настроек Intellij Idea">
       <option name="closed" value="true" />
@@ -345,7 +460,175 @@
       <option name="project" value="LOCAL" />
       <updated>1721993931836</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix: update tests for DishRepositoryTest.java">
+      <option name="closed" value="true" />
+      <created>1722011501569</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722011501569</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: update build.gradle in projects to java 20">
+      <option name="closed" value="true" />
+      <created>1722011551249</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722011551249</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: change application.yaml to application.properties in menu-service">
+      <option name="closed" value="true" />
+      <created>1722011603427</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722011603427</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat!: update application.properties in eureka-server">
+      <option name="closed" value="true" />
+      <created>1722011644975</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722011644975</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: create controllers for adding/editing dishes and graphql endpoint for getting dishes info">
+      <option name="closed" value="true" />
+      <created>1722017097951</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722017097951</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add jwt authentication for admin methods">
+      <option name="closed" value="true" />
+      <created>1722034314613</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722034314613</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: add jwt authentication for admin methods">
+      <option name="closed" value="true" />
+      <created>1722034390005</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722034390005</updated>
+    </task>
+    <task id="LOCAL-00020" summary="menu-service: feat: add secure filter and jwt service">
+      <option name="closed" value="true" />
+      <created>1722038265412</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722038265412</updated>
+    </task>
+    <task id="LOCAL-00021" summary="menu-service: fix: fix postgres datasource">
+      <option name="closed" value="true" />
+      <created>1722067159423</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1722067159423</updated>
+    </task>
+    <task id="LOCAL-00022" summary="menu-service: fix: edit secured controller methods">
+      <option name="closed" value="true" />
+      <created>1722067191695</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1722067191695</updated>
+    </task>
+    <task id="LOCAL-00023" summary="menu-service: fix!: update V1_0__InitDatabase.sql">
+      <option name="closed" value="true" />
+      <created>1722070842721</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1722070842721</updated>
+    </task>
+    <task id="LOCAL-00024" summary="menu-service: feat: add validation for requests and add responses for AdminController methods">
+      <option name="closed" value="true" />
+      <created>1722070915314</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1722070915314</updated>
+    </task>
+    <task id="LOCAL-00025" summary="menu-service: feat: add test for AdminController">
+      <option name="closed" value="true" />
+      <created>1722074517608</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1722074517608</updated>
+    </task>
+    <task id="LOCAL-00026" summary="menu-service: feat: add test for AdminController">
+      <option name="closed" value="true" />
+      <created>1722074536102</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1722074536102</updated>
+    </task>
+    <task id="LOCAL-00027" summary="menu-service: feat: add caching for requests and enable graphql">
+      <option name="closed" value="true" />
+      <created>1722076729280</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1722076729280</updated>
+    </task>
+    <task id="LOCAL-00028" summary="menu-service: feat: add README.md">
+      <option name="closed" value="true" />
+      <created>1722077735988</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1722077735988</updated>
+    </task>
+    <task id="LOCAL-00029" summary="menu-service: feat: add README.md">
+      <option name="closed" value="true" />
+      <created>1722077781608</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1722077781608</updated>
+    </task>
+    <task id="LOCAL-00030" summary="menu-service: feat: add graphql mutations for updating and creating dishes. Code refactor for providing service layer for dish entity">
+      <option name="closed" value="true" />
+      <created>1722175737058</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1722175737058</updated>
+    </task>
+    <task id="LOCAL-00031" summary="menu-service: feat: update README.md">
+      <option name="closed" value="true" />
+      <created>1722181127622</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1722181127622</updated>
+    </task>
+    <task id="LOCAL-00032" summary="api-gateway: init: init api-gateway module">
+      <option name="closed" value="true" />
+      <created>1722248611442</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1722248611442</updated>
+    </task>
+    <task id="LOCAL-00033" summary="api-gateway: init: init api-gateway module">
+      <option name="closed" value="true" />
+      <created>1722257640409</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1722257640409</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,9 +646,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init: инициализация проекта. Сохранение настроек Intellij Idea" />
-    <MESSAGE value="feat: initializing eureka server container" />
-    <MESSAGE value="feat: initializing menu service" />
     <MESSAGE value="feat: add model entity. Add MyBatis mapper and config" />
     <MESSAGE value="feat: update MenuItemRepository.java, menuItem-mapper.xml. Set locations for myBatis config and mappers" />
     <MESSAGE value="fix: fix grammar syntax V1_0__InitDatabase.sql migration" />
@@ -374,6 +654,49 @@
     <MESSAGE value="feat: add tests for MenuItemRepository.class with auto cleaning tables" />
     <MESSAGE value="fix: update entity MenuItem.java to Dish.java" />
     <MESSAGE value="feat: update eureka-server properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update eureka-server properties" />
+    <MESSAGE value="fix: update tests for DishRepositoryTest.java" />
+    <MESSAGE value="feat: update build.gradle in projects to java 20" />
+    <MESSAGE value="fix: change application.yaml to application.properties in menu-service" />
+    <MESSAGE value="feat!: update application.properties in eureka-server" />
+    <MESSAGE value="feat: create controllers for adding/editing dishes and graphql endpoint for getting dishes info" />
+    <MESSAGE value="feat: add jwt authentication for admin methods" />
+    <MESSAGE value="menu-service: feat: add secure filter and jwt service" />
+    <MESSAGE value="menu-service: fix: fix postgres datasource" />
+    <MESSAGE value="menu-service: fix: edit secured controller methods" />
+    <MESSAGE value="menu-service: fix!: update V1_0__InitDatabase.sql" />
+    <MESSAGE value="menu-service: feat: add validation for requests and add responses for AdminController methods" />
+    <MESSAGE value="menu-service: feat: add test for AdminController" />
+    <MESSAGE value="menu-service: feat: add caching for requests and enable graphql" />
+    <MESSAGE value="menu-service: feat: add README.md" />
+    <MESSAGE value="menu-service: feat: add graphql mutations for updating and creating dishes. Code refactor for providing service layer for dish entity" />
+    <MESSAGE value="menu-service: feat: update README.md" />
+    <MESSAGE value="api-gateway: init: init api-gateway module" />
+    <option name="LAST_COMMIT_MESSAGE" value="api-gateway: init: init api-gateway module" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/web/controllers/AdminController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/menu-service/src/main/java/com/vashchenko/micro/edu/menuservice/model/validation/validators/PriceValidator.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/menu-service/src/test/java/com/vashchenko/micro/edu/menuservice/web/controllers/AdminControllerTest.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.LinkedHashMap$Entry" memberName="key" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

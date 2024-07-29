@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      unsecured:
+        unsecured-urls:
+          - /home
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: on
+    instance-id: ${spring.application.name}:${random.value}
+
+jwt:
+  income:
+    secret: 9322b577a80c551da2514f22376eda55dcfa88548cf0f30618e901a63e8b90f3
+  outcome:
+    secret: 9322b577a80c551da2414f22376eda55dcfa88848cf0f30618e901a63e8b90f5
+
